@@ -1,5 +1,6 @@
 from api.cdragon import fetch_champs
 from utils.data_parser import parse_champs
+from utils.champions import Champions
 
 def main():
     raw_data = fetch_champs()
