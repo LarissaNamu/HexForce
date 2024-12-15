@@ -12,6 +12,6 @@ class Champions:
         self.image_path = image_path
 
     def __str__(self):
-        print(f"{self.name} (Cost: {self.cost}, Traits: {', '.join(self.traits)})")
+        return (f"{self.name} (Cost: {self.cost}, Traits: {', '.join(self.traits)})")
     
     
