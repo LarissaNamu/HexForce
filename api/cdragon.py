@@ -6,7 +6,7 @@ current_set = 13    # current set/season number
 
 # function that fetches champ information from CDragon API
 def fetch_champs():
-    path = f"{BASE_URL}v1/tftchampions-teamplanner.json"    # path to json file wtih champ info
+    path = f"{BASE_URL}v1/tftchampions-teamplanner.json"    # path to json file with champ info
     response = requests.get(path)       # response variable
 
     if response.status_code == 200:     # successful response from API
