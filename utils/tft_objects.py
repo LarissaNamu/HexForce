@@ -32,7 +32,11 @@ class Teams:
         return f"{self.team_name} : {", ".join(self.champs)} --- Synergies: {self.synergy_string(self.champs)}"
 
     def synergy_string(self, champs):   # returns a a pretty string of synergy dictionary
-        s_str = f""
+        s_str = ""
+        
+        for s in self.synergies:
+            s_str = s_str + f"{s}: {self.synergies[s]}\n"
+
         return s_str
         
 
