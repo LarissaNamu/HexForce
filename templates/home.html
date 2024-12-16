@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% block content%}
-    <h1>Home Page</h1>
+    <h1><strong>Home Page</strong></h1>
+    
     {% for champ in champions %}
         <h1>{{ champ.name }}</h1>
         <p>Cost: {{ champ.cost }}</p>
