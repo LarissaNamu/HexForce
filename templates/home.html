@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Home Page</h1>
+    {% for champ in champions %}
+        <h1>{{ champ.name }}</h1>
+        <p>Cost: {{ champ.cost }}</p>
+        <p>Traits: {{ ', '.join(champ.traits) }}</p>
+    {% endfor %}
+</body>
+</html>
