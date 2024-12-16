@@ -26,7 +26,7 @@ class Teams:
     def __init__(self, team_name, champs):
         self.team_name = team_name
         self.champs = champs
-        synergies = self.calculate_synergy(champs)
+        self.synergies = self.calculate_synergy(champs)
 
     def __str__(self):
         return f"{self.team_name} : {", ".join(self.champs)} --- \nSynergies: \n{self.synergy_string(self.champs)}"
