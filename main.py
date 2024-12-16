@@ -15,7 +15,9 @@ def main():
 
             # print out the champ appended
             print(temp_champ)
-
+        print()
+        print("Now testing Teams Class:")
+        
     else:
         print("Data retrieval failure - printing from main.py")
 

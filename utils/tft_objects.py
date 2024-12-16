@@ -29,7 +29,7 @@ class Teams:
         self.synergies = self.calculate_synergy(champs)
 
     def __str__(self):
-        return f"{self.team_name} : {", ".join(self.champs)} --- \nSynergies: \n{self.synergy_string(self.champs)}"
+        return f"{self.team_name} : {', '.join(self.champs)} --- \nSynergies: \n{self.synergy_string(self.champs)}"
 
     def synergy_string(self, champs):   # returns a a pretty string of synergy dictionary
         s_str = ""
@@ -38,7 +38,10 @@ class Teams:
             s_str = s_str + f"{s}: {self.synergies[s]}\n"
 
         return s_str
-        
+    
+    def add_champ(self, added_champ):
+        self.champs.append(added_champ)
+        self.calculate_synergy(self.champs)     # update synergies
 
     def calculate_synergy(self,champs):     # returns modified synergy dictionary  --- key: trait , val: freq of trait
         for c in champs:    #iterate through the champ list, update synergy when new trait encountered, add 1 to existing traits
