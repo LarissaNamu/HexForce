@@ -1,4 +1,4 @@
-from api.cdragon import fetch_champs, fetch_trait_icons, fetch_image_splash
+from api.cdragon import fetch_champs
 from utils.data_parser import parse_champs
 from utils.tft_objects import Champions, Teams
 from flask import Flask, render_template
@@ -12,6 +12,7 @@ if raw_data:
     for c in champs:
         # create champ object and append to champion list
         temp_champ = Champions(c['name'], c['cost'], c['traits'], c['image_path'])
+        print(temp_champ.image_path)    #delete after testing
         champions_list.append(temp_champ)
 
 

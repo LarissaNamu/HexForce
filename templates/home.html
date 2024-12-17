@@ -6,5 +6,6 @@
         <h1>{{ champ.name }}</h1>
         <p>Cost: {{ champ.cost }}</p>
         <p>Traits: {{ ', '.join(champ.traits) }}</p>
+        <img src = "{{ champ.image_path }}" alt = "{{ champ.name }}">
     {% endfor %}
 {% endblock content%}

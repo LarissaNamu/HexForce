@@ -1,5 +1,5 @@
 import requests     # library that handles API requests
-from PIL import Image
+
 
 # URL that all of our urls will have
 BASE_URL = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/"

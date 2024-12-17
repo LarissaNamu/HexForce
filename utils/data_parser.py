@@ -1,4 +1,4 @@
-
+from api.cdragon import clean_image_path
 
 def parse_champs(champ_data):
     champs = []
@@ -7,6 +7,7 @@ def parse_champs(champ_data):
         cost = champ.get("tier")
         traits = [trait.get("name") for trait in champ.get("traits",[])]    # get the names of traits
         image_path = champ.get("squareSplashIconPath")
+        image_path = clean_image_path(image_path)
 
         champs.append({
             "name" : name,
