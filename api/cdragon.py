@@ -1,4 +1,5 @@
 import requests     # library that handles API requests
+from PIL import Image
 
 # URL that all of our urls will have
 BASE_URL = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/"
@@ -17,19 +18,13 @@ def fetch_champs():
         print(f"Error: API response for fetch_champs() failed - status code{response.status_code}")    # print error message
         return None
     
-def fetch_image_splash(image_path):
+def clean_image_path(image_path):
     # image_path is the raw unedited "squareSplashIconPath" variable
     # need to make it lowercase and delete /lol-game-data/assets/ part of the path - 21 starting at 0
     image_path = image_path.lower()   # makes lowercase
     image_path = image_path[22:]    # deletes first part of path
-    response = requests.get(image_path)
-
-    if response.status_code == 200:
-        image_info = response.json()
-        return image_info
-    else: 
-        print(f"Error: API response failed for fetch_image_splash() failed - status code{response.status_code}")    # print error message
-        return None
+    path = BASE_URL + image_path
+    return path
 
 
 def fetch_trait_icons():

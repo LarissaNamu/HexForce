@@ -14,12 +14,6 @@ if raw_data:
         temp_champ = Champions(c['name'], c['cost'], c['traits'], c['image_path'])
         champions_list.append(temp_champ)
 
-# retrieve images of the champions
-image_list = []
-for c in champions_list:
-    path = c.get_image_path()
-    raw_image = fetch_image_splash(path)
-    image_list.append(raw_image)
 
 @app.route("/")
 @app.route("/home")
