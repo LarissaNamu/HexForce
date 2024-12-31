@@ -1,7 +1,7 @@
 from api.cdragon import fetch_champs
 from utils.data_parser import parse_champs
 from utils.tft_objects import Champions, Teams
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
 raw_data = fetch_champs()
