@@ -3,7 +3,7 @@ import requests     # library that handles API requests
 
 # URL that all of our urls will have
 BASE_URL = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/"
-current_set = 13    # current set/season number
+current_set = 14    # current set/season number
 
 # function that fetches champ information from CDragon API
 def fetch_champs():
